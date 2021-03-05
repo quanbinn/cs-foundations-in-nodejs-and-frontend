@@ -1,23 +1,37 @@
 # 浏览器端使用js读取文件中全部字符串
 
-## 基本使用原理
+```html
+<html>
+    <body>
 
-1. 
-2. 
-3. 
+        <input type="file" id="fileinput" />
+        <div id="readResult"></div>
 
-## 打开实验文件
+        <script type="text/javascript">
+            function readSingleFile(evt) {
+                //Retrieve the first (and only!) File from the FileList object
+                var f = evt.target.files[0];
 
-单击右方的[](), 浏览器里会打开一个新的页面，里面有下面的代码段，如下图所示。
+                if (f) {
+                    var r = new FileReader();
+                    r.onload = function (e) {
+                        var contents = e.target.result;
+						console.log(contents);
+                        document.getElementById("readResult").innerHTML = contents;
+                    }
+                    r.readAsText(f);
+                } else {
+                    alert("Failed to load file");
+                }
+            }
 
-```javascript
+            document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
 
+        </script>
+
+    </body>
+</html>
 ```
-
-## Reference
-
-1. [**regex101**](https://regex101.com/r/dmRygT/1)
-
 
 
 
