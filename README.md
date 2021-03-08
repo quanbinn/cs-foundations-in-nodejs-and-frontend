@@ -26,8 +26,8 @@
 
 ### 编译（本质->最终大都是用c或c++编译）
 
+- [浏览器端解析html+css+js](/chapters/编译/浏览器端解析html+css+js.md)
 - [用node.js在服务器端编译vue.js的多个文件](/chapters/编译/用node.js在服务器端编译vue.js的多个文件.md)
-
 - [用c++在服务器端编译node.js多个文件](/chapters/编译/用c++在服务器端编译node.js多个文件.md)
 
 ### 附录
